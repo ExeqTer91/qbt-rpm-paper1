@@ -1,5 +1,8 @@
 # Paper 1 — Computational Package
 
+Submission package version: v3 (post round-2 audit). See PCCP_SUBMISSION_CHECKLIST.md for patch history.
+
+
 **Title:** Ratio-dependent response structure in a reduced radical-pair model of magnetoreception
 
 **Author:** Andrei-Sebastian Ursachi, Independent Researcher (ORCID: 0009-0002-6114-5011)
