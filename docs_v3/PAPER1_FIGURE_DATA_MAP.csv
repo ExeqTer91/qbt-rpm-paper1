@@ -1,0 +1,19 @@
+panel,npz_file,array_keys,plotted_quantity,numeric_annotations
+1A,(schematic; no NPZ),n/a,"cartoon: S1, S2, I, hyperfine tensor, B vector, k_S/k_T channels","A∥=1.0; A⊥=0.5; B/A∥=0.05"
+1B,"preflight_calibration.npz","a_isotropic_limit['alpha']; c_axial_orientation['alpha']","bar plot: isotropic α vs axial α (log y-axis)","isotropic α=2.22e-16 (machine precision); axial α≈1.08e-04"
+1C,"sweep_kSkT_main_lam1.0_haberkorn.npz","u, alpha","α(u) at λ=1, J=0; linear y-axis","u*=−0.30 (vertical dashed line); FWHM≈1.20 decades; α_peak≈1.34e-04"
+2A,"sweep_kSkT_main_lam0.1_haberkorn.npz; sweep_kSkT_main_lam1.0_haberkorn.npz; sweep_kSkT_main_lam10.0_haberkorn.npz","u, alpha (per file)","α(u) on log y-axis; three curves λ ∈ {0.1, 1.0, 10.0}","peaks: 2.92e-02, 1.34e-04, 2.70e-08; locations: u*=+0.50, −0.30, −0.30"
+2B,(same three files as 2A),"u, alpha (per file)","α(u)/max(α) on linear y-axis; three curves","normalized RMS deviation between λ=0.1 and λ=1: ≈0.43"
+2C,"sweep_uJ_main_final.npz","u, J, ZH (Haberkorn 2D heatmap)","heatmap α(u, J); colorbar","J range: [0, 3], 21 points; u range: [-1.5, 2.5], 31 points"
+2D,(derived from panels A–B),n/a,"inset table","rows for λ ∈ {0.1, 1, 10}: u*, peak α, FWHM"
+3A,"sweep_dephasing_main_haberkorn.npz; sweep_dephasing_main_lindblad.npz","gamma_v3, alpha_v3 (per file)","α(γ); log x-axis; linear y-axis; Haberkorn solid + absorbing-product effective dashed","γ_opt≈3.00 (vertical dotted line); peak α≈2.28e-04; γ=0 baseline α≈1.08e-04 (factor ≈2× over γ=0); local min near γ≈0.2; channel: D[S₁_z]+D[S₂_z]"
+3B,"sweep_T1_main_final.npz","T1_grid, alpha","α(Γ₁); log x-axis; linear y-axis; single curve","maximum at Γ₁=0 with α≈1.08e-04; partial recovery near Γ₁≈3; ""no enhancement window over the tested range""; channel: (Γ₁/2)(D[S₁_+]+D[S₁_-]) — electron 1 only"
+3C,"(derived from sweep_dephasing_main_haberkorn.npz, sweep_T1_main_final.npz)",n/a,"bar plot: peak α (z-deph), peak α (spin-flip), γ=0 baseline","z-dephasing enhances; spin-flip relaxation suppresses over tested range"
+4A,"sweep_spectral_main_final.npz","u_grid, eigenvalues_real","Re(λ_n) vs u for slowest-decaying modes (top 4)",none
+4B,"sweep_spectral_main_final.npz","u_grid, spectral_proxy, alpha, proxy_alpha_correlation","Δ_H(u) (blue, normalized to its peak) overlaid with α(u) (red dashed, normalized to its peak)","Pearson r=0.9126"
+4C,"sweep_spectral_main_final.npz","u_grid, S_loss, S_perm","S_loss(u) (green) and S_perm(u) (purple dashed)","descriptive only; not a robust independent signature"
+S1,"preflight_calibration.npz","all preflight test outputs","six-panel diagnostic table","test names + numerical results (closure 8.88e-16; conservation 4.33e-15; finite-time δYS 2.86e-12 worst; legacy max diff 0.0)"
+S2,"all sweep_*.npz","yield_closure_err, trace_diagnostic_err arrays per sweep","worst-case errors vs scan parameter","all errors below 1e-10 throughout"
+S3,"sweep_orient_main_axial_u-1.0.npz; sweep_orient_main_axial_u0.0.npz; sweep_orient_main_axial_u1.0.npz; sweep_orient_main_axial_u2.0.npz","theta, phi, ys","Fibonacci-sphere orientation maps Y_S(θ, φ) at u ∈ {-1, 0, 1, 2}",u value per panel
+S4,"sweep_kSkT_main_lam1.0_haberkorn.npz; sweep_kSkT_main_lam1.0_lindblad.npz","u, alpha (per file)","Y_S(Haberkorn) − Y_S(absorbing-product effective) vs u","max difference: 0.0 (numerical precision; tautological by construction)"
+S5,"(optional, exploratory; outside scope of Paper 1)",n/a,polymorphic toy/3D morphologies,"exploratory; treated separately"
