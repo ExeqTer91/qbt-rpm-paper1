@@ -1,13 +1,12 @@
 # Paper 1 — Computational Package
 
-Submission package version: v3 (post round-2 audit). See PCCP_SUBMISSION_CHECKLIST.md for patch history.
-
+Canonical v3 reproducibility package (post round-2 audit). This repository was originally assembled for a PCCP submission; it is now used as the public code/data/figure archive supporting a Journal of the Royal Society Interface submission. Legacy PCCP-specific files are retained for provenance only.
 
 **Title:** Ratio-dependent response structure in a reduced radical-pair model of magnetoreception
 
 **Author:** Andrei-Sebastian Ursachi, Independent Researcher (ORCID: 0009-0002-6114-5011)
 
-**Status:** Pre-submission. Final figures, manuscript text, audit tables, and reproducibility infrastructure are frozen. Public Zenodo DOI and GitHub release tag are pending.
+**Current status:** Initial submission to *Journal of the Royal Society Interface* prepared/submitted in May 2026. The computational outputs, final figures, manuscript-supporting audit tables, and reproducibility infrastructure are frozen for review. A Zenodo DOI and final release tag are pending.
 
 ---
 
@@ -22,11 +21,20 @@ This is the complete computational package supporting Paper 1. It contains:
 - the figure-generation script (`src/v3/figures/generate_paper1_figures.py`)
 - a SHA256 manifest of every NPZ read and every figure written (`figures_paper1_final/figure_manifest.txt`)
 - a figure-data mapping CSV (`docs_v3/PAPER1_FIGURE_DATA_MAP.csv`)
+- a claim-support table mapping empirical claims to data sources (`docs_v3/claim_support_table_paper1.md`)
 - a release-notes draft (`RELEASE_NOTES_PAPER1_DRAFT.md`)
 - a Paper 1 → Paper 2 handoff document (`docs_v3/PAPER1_TO_PAPER2_HANDOFF.md`)
 - a git status note (`docs_v3/PAPER1_GIT_STATUS.md`)
 
 The package is designed to be auditable end-to-end: every numerical claim in the manuscript is supported by a specific NPZ file and a specific array key, all recorded in `PAPER1_FIGURE_DATA_MAP.csv` and `claim_support_table_paper1.md`.
+
+---
+
+## Journal-submission note
+
+The same frozen v3 computational archive supports the retargeted *Journal of the Royal Society Interface* version of the manuscript. The journal framing changed from a physical-chemistry submission to a physical/life-sciences interface submission, but the numerical results, figures, raw outputs, validation tests, and claim-support boundaries are unchanged.
+
+For the Interface submission, the work should be read as a reproducible computational biophysics baseline for radical-pair magnetoreception: a reduced spin-dynamical model that maps physical spin dynamics into orientation-dependent chemical yield readouts relevant to biological compass models.
 
 ---
 
@@ -72,9 +80,9 @@ All six tests must pass before any sweep is considered valid.
 
 ## What the package does NOT contain
 
-- the published paper PDF (will be added when accepted)
-- the Zenodo DOI (will be added when assigned)
-- the GitHub release tag (intentionally not yet created; final tag is `paper1-v1.0-reproducible`, pending)
+- the published paper PDF (to be added only if/when accepted)
+- a final Zenodo DOI (pending)
+- a final archival release tag (pending)
 - the toy yield-transducer or 3D-geometry exploratory work (these belong to Paper 2; see `PAPER1_TO_PAPER2_HANDOFF.md`)
 
 ---
@@ -89,9 +97,9 @@ All six tests must pass before any sweep is considered valid.
 
 ## Citation
 
-When citing this work prior to formal publication, please cite the archived package:
+When citing this work prior to formal publication, please cite the repository/archive:
 
-> Ursachi, A.-S. (2026). Ratio-dependent response structure in a reduced radical-pair model of magnetoreception (computational package, version 1.0-reproducible draft). [Zenodo DOI pending].
+> Ursachi, A.-S. (2026). Ratio-dependent response structure in a reduced radical-pair model of magnetoreception (computational package, v3 reproducibility archive). GitHub repository: https://github.com/ExeqTer91/qbt-rpm-paper1. Archival DOI pending.
 
 ---
 
